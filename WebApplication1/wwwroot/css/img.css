@@ -1,0 +1,31 @@
+﻿body{
+    height: 100%;
+    margin: 10px;
+
+}
+footer{
+    margin: -25px;
+}
+.box{
+    overflow: scroll;
+    padding: 5px;
+    margin: 5px;
+    max-height: 850px;
+    width: 1250px;
+    margin-bottom: 10px;
+
+}
+.img{
+    float: left;
+    margin-top: 1px;
+    padding: 5px;
+    max-height: 800px;
+}
+
+.mp4{
+    float: left;
+    margin-top: 1px;
+    padding: 5px;
+    max-width: 50%;
+    max-height: 800px; 
+}
