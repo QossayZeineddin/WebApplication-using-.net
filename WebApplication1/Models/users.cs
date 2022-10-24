@@ -11,12 +11,11 @@ public class users
     [Display(Name = "User password")]
     [DataType(DataType.Password)]
     public String password { get; set; }
+    
+    [DataType(DataType.EmailAddress)] public string email { get; set; }
 
-    [MaxLength(55)]
-    [DataType(DataType.EmailAddress)]
-    public string email { get; set; }
-
-    [MaxLength(7)] public String? gender { get; set; }
+    [MaxLength(7)]
+    public String? gender { get; set; }
 
     [DataType(DataType.Date)] public DateTime? dateOfBrith { get; set; }
 }
