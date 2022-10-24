@@ -5,7 +5,7 @@
 }
 
 <head>
-    <link rel="stylesheet" href="css/site.css" />
+    <link rel="stylesheet" href="css/site.css"/>
 </head>
 <h1 class="index">Index</h1>
 
@@ -14,35 +14,39 @@
 </p>
 <form asp-controller="user" asp-action="Index" method="get">
     <p>
-        Search for user by his name : <input type="text"    name="name" />
-        <input type="submit" value="Filter" />
+        Search for user by his name : <input type="text" name="name"/>
+        <input type="submit" value="Filter"/>
     </p>
 </form>
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.password)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.gender)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.dateOfBrith)
-            </th>
-            <th>
-                userAPI
-            </th>
-        </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phone_num)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateOfBrith)
+        </th>
+        <th>
+            userAPI
+        </th>
+    </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model)
+    {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.name)
@@ -57,6 +61,9 @@
                 @Html.DisplayFor(modelItem => item.gender)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.phone_num)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.dateOfBrith)
             </td>
             <td>
@@ -65,6 +72,6 @@
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>
